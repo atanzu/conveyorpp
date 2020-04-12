@@ -9,21 +9,21 @@ output = f3(f2(f1(input)));
 ```
 So, if you continuously feed this pipeline with data, your timing looks like this:
 
+```
 f1: |XXXXXX|..............|XXXXXX|..............|XXXXXX|..............
-
 f2: .......|XXXXXXXXXX|..........|XXXXXXXXXX|..........|XXXXXXXXXX|...
-
 f3: ..................|XX|..................|XX|..................|XX|
+```
 
 An easy way o speed up the process is to execute the function chain in parallel, i.e. create several threads for each `f3(f2(f1(...)))` call. However, sometimes it is not possible, e.g. your functions depend on some hardware calculation modules with exclusive access or aren't reentrant.
 
 Conveyourpp lib solves this problems by simplifying building of a parallel worker chain. For instance, the example above with conveyorpp (with zero-queue settings) looks like this:
 
+```
 f1: |XXXXXX||XXXXXX|...|XXXXXX|....|XXXXXX|....|XXXXXX|....
-
 f2: .......|XXXXXXXXXX||XXXXXXXXXX||XXXXXXXXXX||XXXXXXXXXX|
-
 f3: ..................|XX|........|XX|........|XX|.........
+```
 
 So if your calculation can be divided in several stages, you can utilize all the computational power you've got.
 
