@@ -51,7 +51,6 @@ install(
 )
 
 
-find_package(conveyorpp REQUIRED)
 find_package(PkgConfig)
 pkg_search_module(GTEST REQUIRED gtest_main)
 
