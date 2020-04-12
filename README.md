@@ -38,10 +38,6 @@ Optionally you can install it via
 ```
 sudo make install
 ```
-or run tests via
-```
-make test
-```
 
 ## Usage
 ### Usual functions
