@@ -27,6 +27,22 @@ f3: ..................|XX|........|XX|........|XX|.........
 
 So if your calculation can be divided in several stages, you can utilize all the computational power you've got.
 
+## Installation
+To install conveyourpp, clone this repository and perform the following actions:
+```
+mkdir build && cd build
+cmake ..
+make
+```
+Optionally you can install it via
+```
+sudo make install
+```
+or run tests via
+```
+make test
+```
+
 ## Usage
 ### Usual functions
 Imagine you have three functions:
