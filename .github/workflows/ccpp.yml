@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2 CyberZHG/github-action-gtest@0.0.1
+
     - name: configure
       run: mkdir build && cd build && cmake ..
     - name: build
