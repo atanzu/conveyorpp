@@ -5,6 +5,8 @@ project(conveyorpp VERSION 0.0.1 LANGUAGES CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+option(BUILD_TESTS "Build tests" ON)
+
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE 
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
@@ -49,6 +51,11 @@ install(
     DIRECTORY ${PROJECT_SOURCE_DIR}/include/
     DESTINATION include/${PROJECT_NAME}
 )
+
+
+if (BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
 
 
 # additional target to perform clang-format run, requires clang-format

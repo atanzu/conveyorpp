@@ -11,6 +11,3 @@ target_include_directories(test_basic_primitives PRIVATE ${PROJECT_SOURCE_DIR}..
 target_link_libraries(test_basic_primitives pthread ${GTEST_BOTH_LIBRARIES})
 target_compile_options(test_basic_primitives PUBLIC ${GTEST_CFLAGS})
 
-include(CTest)
-add_test(basic_primitives test_basic_primitives)
-
