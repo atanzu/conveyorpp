@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir build && cd build
+      run: mkdir build && cd build && cmake ..
     - name: make
-      run: cmake --build build --config Release
+      run: cmake --build build
     - name: action-gtest
       uses: CyberZHG/github-action-gtest@0.0.1
       with:
