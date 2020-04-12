@@ -17,3 +17,7 @@ jobs:
       run: mkdir build && cd build && cmake -DBUILD_TESTS=OFF ..
     - name: make
       run: cmake --build build
+    - name: action-gtest
+      uses: CyberZHG/github-action-gtest@0.0.1
+      with:
+        runs: "cd build && cmake .. && make && cd tests && make && ./test_basic_primitives"
