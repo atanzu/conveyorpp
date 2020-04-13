@@ -1,7 +1,7 @@
 # conveyorpp
 A simple С++ library for building conveyor-like pipelines
 
-[![Build Status](https://travis-ci.com/atanzu/conveyorpp.svg?branch=master)](https://travis-ci.com/atanzu/conveyorpp)
+[![Build Status](https://travis-ci.org/atanzu/conveyorpp.svg?branch=master)](https://travis-ci.org/atanzu/conveyorpp)
 
 ## Description
 This library allows users to easily create linear parallel pipelines.
