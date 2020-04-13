@@ -7,6 +7,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 option(BUILD_TESTS "Build tests" ON)
 
+if(BUILD_TESTS)
+    include(cmake/gtest.cmake)
+endif()
+
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE 
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
@@ -53,7 +57,7 @@ install(
 )
 
 
-if (BUILD_TESTS)
+if(BUILD_TESTS)
     add_subdirectory(tests)
 endif()
 

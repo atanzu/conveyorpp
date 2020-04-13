@@ -24,3 +24,4 @@ script:
   - cd build
   - cmake -DBUILD_TESTS=ON .. && make
   - cd tests && make
+  - ./test_basic_primitives
