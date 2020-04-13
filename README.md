@@ -1,6 +1,8 @@
 # conveyorpp
 A simple С++ library for building conveyor-like pipelines
 
+[![Build Status](https://travis-ci.com/atanzu/conveyorpp.svg?branch=master)](https://travis-ci.com/atanzu/conveyorpp)
+
 ## Description
 This library allows users to easily create linear parallel pipelines.
 For instance. imagine you have three functions `f1`, `f2` and `f3`, and your result is calculated like
